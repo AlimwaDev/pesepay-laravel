@@ -1,0 +1,54 @@
+{
+    "name": "alimwa/pesepay-laravel",
+    "description": "Simplifying handling Pese Pay payments in Laravel for internal projects.",
+    "keywords": [
+        "alimwa",
+        "pesepay-laravel"
+    ],
+    "homepage": "https://github.com/alimwa/pesepay-laravel",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Lennon Mudenda",
+            "email": "lensig13@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alimwa\\PesepayLaravel\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Alimwa\\PesepayLaravel\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Alimwa\\PesepayLaravel\\PesepayLaravelServiceProvider"
+            ],
+            "aliases": {
+                "PesepayLaravel": "Alimwa\\PesepayLaravel\\PesepayLaravelFacade"
+            }
+        }
+    }
+}
