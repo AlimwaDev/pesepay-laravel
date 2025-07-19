@@ -3,7 +3,11 @@
     "description": "Simplifying handling Pese Pay payments in Laravel for internal projects.",
     "keywords": [
         "alimwa",
-        "pesepay-laravel"
+        "pesepay",
+        "laravel",
+        "zimbabwe",
+        "e-commerce",
+        "payments"
     ],
     "homepage": "https://github.com/alimwa/pesepay-laravel",
     "license": "MIT",
