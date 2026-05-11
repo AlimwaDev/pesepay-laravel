@@ -1,59 +1,58 @@
 {
-    "name": "alimwa/pesepay-laravel",
-    "description": "Simplifying handling Pese Pay payments in Laravel for internal projects.",
-    "keywords": [
-        "alimwa",
-        "pesepay",
-        "laravel",
-        "zimbabwe",
-        "e-commerce",
-        "payments"
-    ],
-    "homepage": "https://github.com/AlimwaDev/pesepay-laravel",
-    "license": "MIT",
-    "type": "library",
-    "authors": [
-        {
-            "name": "Lennon Mudenda",
-            "email": "lensig13@gmail.com",
-            "role": "Developer"
-        }
-    ],
-    "require": {
-        "php": "^7.4|^8.0",
-        "codevirtus/pesepay": "^1.0",
-        "illuminate/support": "^8.0"
-    },
-    "require-dev": {
-        "orchestra/testbench": "^6.0",
-        "phpunit/phpunit": "^9.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "Alimwa\\PesepayLaravel\\": "src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Alimwa\\PesepayLaravel\\Tests\\": "tests"
-        }
-    },
-    "scripts": {
-        "test": "vendor/bin/phpunit",
-        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-
-    },
-    "config": {
-        "sort-packages": true
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Alimwa\\PesepayLaravel\\PesepayLaravelServiceProvider"
-            ],
-            "aliases": {
-                "PesepayLaravel": "Alimwa\\PesepayLaravel\\PesepayLaravelFacade"
-            }
-        }
+  "name": "alimwa/pesepay-laravel",
+  "description": "Simplifying handling Pese Pay payments in Laravel for internal projects.",
+  "keywords": [
+    "alimwa",
+    "pesepay",
+    "laravel",
+    "zimbabwe",
+    "e-commerce",
+    "payments"
+  ],
+  "homepage": "https://github.com/AlimwaDev/pesepay-laravel",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Lennon Mudenda",
+      "email": "lensig13@gmail.com",
+      "role": "Developer"
     }
+  ],
+  "require": {
+    "php": "^8.1|^8.2|^8.3|^8.4",
+    "codevirtus/pesepay": "^1.0",
+    "illuminate/support": "^10.0|^11.0|^12.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^8.0|^9.0|^10.0",
+    "phpunit/phpunit": "^10.0|^11.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Alimwa\\PesepayLaravel\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Alimwa\\PesepayLaravel\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Alimwa\\PesepayLaravel\\PesepayLaravelServiceProvider"
+      ],
+      "aliases": {
+        "PesepayLaravel": "Alimwa\\PesepayLaravel\\PesepayLaravelFacade"
+      }
+    }
+  }
 }
