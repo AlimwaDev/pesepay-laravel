@@ -9,7 +9,7 @@ class PesepayLaravelServiceProvider extends ServiceProvider
     /**
      * Bootstrap the application services.
      */
-    public function boot()
+    public function boot(): void
     {
         /*
          * Optional methods to load your package assets
@@ -20,9 +20,14 @@ class PesepayLaravelServiceProvider extends ServiceProvider
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
         if ($this->app->runningInConsole()) {
-            $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('pesepay-laravel.php'),
-            ], 'config');
+            $this->publishes(
+                [
+                    __DIR__ . "/../config/config.php" => config_path(
+                        "pesepay-laravel.php",
+                    ),
+                ],
+                "config",
+            );
 
             // Publishing the views.
             /*$this->publishes([
@@ -47,14 +52,17 @@ class PesepayLaravelServiceProvider extends ServiceProvider
     /**
      * Register the application services.
      */
-    public function register()
+    public function register(): void
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'pesepay-laravel');
+        $this->mergeConfigFrom(
+            __DIR__ . "/../config/config.php",
+            "pesepay-laravel",
+        );
 
         // Register the main class to use with the facade
-        $this->app->singleton('pesepay-laravel', function () {
-            return new PesepayLaravel;
+        $this->app->singleton("pesepay-laravel", function () {
+            return new PesepayLaravel();
         });
     }
 }
